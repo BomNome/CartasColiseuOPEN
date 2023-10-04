@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="interface.css">
+
+    
+
+    <title>Fazer Cartinha</title>
+</head>
+<body>
+    <div class="container-geral">
+
+        <div class="caixa-nomes">
+            <div class="caixa-do-nome">
+                <div class="nome-jogador">
+                    <p id="nomeJOGADOR"></p>
+                </div>
+            </div>
+            
+            <div class="caixa-do-nome">
+                <div class="nome-clã">
+                    <p class="" id="nomeCLÃ"></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="nome-lenda">
+            <p id="nomeLENDA"></p>
+        </div>
+
+        <!--<div class="borda"></div>
+        <div class="borda-fundo"></div>
+        <div class="lenda"></div>
+        <div class="custo"></div>-->
+
+        <!--ANTIGO-->
+        <img class="imagensCarta" id="borda" src="imagens/borda/borda.png" alt="borda">
+        <img class="imagensCarta" id="borda-fundo" src="imagens/borda/borda-fundo.png" alt="borda-fundo">
+
+        <img class="imagensCarta" id="lenda" src="" alt="lenda">
+        <img class="imagensCarta" id="custo" src="" alt="custo">
+        
+    </div>
+
+    <div class="interface">
+
+        <h1>Nome do Jogador</h1>
+        <div class="centralizar">
+            <input type="text" id="inputJogador">
+            <button class="confirmarJogador" onclick="confirmarJogador()">Ok</button>
+        </div>
+
+        <h1>Nome do Clã</h1>
+        <div class="centralizar">
+                <select id="clãSelecionado">
+                    <option value=""> - </option>
+                    <option value="Sem Clã">Sem Clã</option>
+                    <option value="Berllot">Berllot</option>
+                    <option value="Bichos do Mato">Bichos do Mato</option>
+                    <option value="Firebirds">Firebirds</option>
+                    <option value="Inimigos da Moda">Inimigos da Moda</option>
+                    <option value="Ulgrimnism">Ulgrimnism</option>
+                    <option value="Vasco">Vasco</option>
+                </select>
+        </div>
+
+        <h1>Personagem</h1>
+        <div class="centralizar">
+                <select id="personagemSelecionado">
+                    <option value=""> - </option>
+                    <option data-value="Default" value="imagens/lenda/1default.png">Default</option>
+                    <option data-value="Ada" value="imagens/lenda/ada.png">Ada</option>
+                    <option data-value="Arcadia" value="imagens/lenda/arcadia.png">Arcadia</option>
+                    <option data-value="Artemis" value="imagens/lenda/artemis.png">Artemis</option>
+                    <option data-value="Asuri" value="imagens/lenda/asuri.png">Asuri</option>
+                    <option data-value="Azoth" value="imagens/lenda/azoth.png">Azoth</option>
+                    <option data-value="Barraza" value="imagens/lenda/barraza.png">Barraza</option>
+                    <option data-value="Bodvar" value="imagens/lenda/bodvar.png">Bodvar</option>
+                    <option data-value="Brynn" value="imagens/lenda/brynn.png">Brynn</option>
+                    <option data-value="Caspian" value="imagens/lenda/caspian.png">Caspian</option>
+                    <option data-value="Cassidy" value="imagens/lenda/cassidy.png">Cassidy</option>
+                    <option data-value="Cross" value="imagens/lenda/cross.png">Cross</option>
+                    <option data-value="Diana" value="imagens/lenda/diana.png">Diana</option>
+                    <option data-value="Dusk" value="imagens/lenda/dusk.png">Dusk</option>
+                    <option data-value="Ember" value="imagens/lenda/ember.png">Ember</option>
+                    <option data-value="Ezio" value="imagens/lenda/ezio.png">Ezio</option>
+                    <option data-value="Fait" value="imagens/lenda/fait.png">Fait</option>
+                    <option data-value="Gnash" value="imagens/lenda/gnash.png">Gnash</option>
+                    <option data-value="Hattori" value="imagens/lenda/hattori.png">Hattori</option>
+                    <option data-value="Isaiah" value="imagens/lenda/isaiah.png">Isaiah</option>
+                    <option data-value="Jaeyun" value="imagens/lenda/jaeyun.png">Jaeyun</option>
+                    <option data-value="Jhala" value="imagens/lenda/jhala.png">Jhala</option>
+                    <option data-value="Jiro" value="imagens/lenda/jiro.png">Jiro</option>
+                    <option data-value="Kaya" value="imagens/lenda/kaya.png">Kaya</option>
+                    <option data-value="Koji" value="imagens/lenda/koji.png">Koji</option>
+                    <option data-value="Kor" value="imagens/lenda/kor.png">Kor</option>
+                    <option data-value="Lin Fei" value="imagens/lenda/lin-fei.png">Lin Fei</option>
+                    <option data-value="Loki" value="imagens/lenda/loki.png">Loki</option>
+                    <option data-value="Lord Vraxx" value="imagens/lenda/lord-vraxx.png">Lord Vraxx</option>
+                    <option data-value="Lucien" value="imagens/lenda/lucien.png">Lucien</option>
+                    <option data-value="Magyar" value="imagens/lenda/magyar.png">Magyar</option>
+                    <option data-value="Mako" value="imagens/lenda/mako.png">Mako</option>
+                    <option data-value="Mirage" value="imagens/lenda/mirage.png">Mirage</option>
+                    <option data-value="Mordex" value="imagens/lenda/mordex.png">Mordex</option>
+                    <option data-value="Munin" value="imagens/lenda/munin.png">Munin</option>
+                    <option data-value="Nix" value="imagens/lenda/nix.png">Nix</option>
+                    <option data-value="Onyx" value="imagens/lenda/onyx.png">Onyx</option>
+                    <option data-value="Orion" value="imagens/lenda/orion.png">Orion</option>
+                    <option data-value="Petra" value="imagens/lenda/petra.png">Petra</option>
+                    <option data-value="Queen Nai" value="imagens/lenda/queen-nai.png">Queen Nai</option>
+                    <option data-value="Ragnir" value="imagens/lenda/ragnir.png">Ragnir</option>
+                    <option data-value="Rayman" value="imagens/lenda/rayman.png">Rayman</option>
+                    <option data-value="Red Raptor" value="imagens/lenda/red-raptor.png">Red Raptor</option>
+                    <option data-value="Reno" value="imagens/lenda/reno.png">Reno</option>
+                    <option data-value="Scarlet" value="imagens/lenda/scarlet.png">Scarlet</option>
+                    <option data-value="Sentinel" value="imagens/lenda/sentinel.png">Sentinel</option>
+                    <option data-value="Sidra" value="imagens/lenda/sidra.png">Sidra</option>
+                    <option data-value="Sir Roland" value="imagens/lenda/sir-roland.png">Sir Roland</option>
+                    <option data-value="Teros" value="imagens/lenda/teros.png">Teros</option>
+                    <option data-value="Tezca" value="imagens/lenda/tezca.png">Tezca</option>
+                    <option data-value="Thatch" value="imagens/lenda/thatch.png">Thatch</option>
+                    <option data-value="Thea" value="imagens/lenda/thea.png">Thea</option>
+                    <option data-value="Thor" value="imagens/lenda/thor.png">Thor</option>
+                    <option data-value="Ulgrim" value="imagens/lenda/ulgrim.png">Ulgrim</option>
+                    <option data-value="Val" value="imagens/lenda/val.png">Val</option>
+                    <option data-value="Vector" value="imagens/lenda/vector.png">Vector</option>
+                    <option data-value="Volkov" value="imagens/lenda/volkov.png">Volkov</option>
+                    <option data-value="Wu Shang" value="imagens/lenda/wu-shang.png">Wu Shang</option>
+                    <option data-value="Xull" value="imagens/lenda/xull.png">Xull</option>
+                    <option data-value="Yumiko" value="imagens/lenda/yumiko.png">Yumiko</option>
+                    <option data-value="Zariel" value="imagens/lenda/zariel.png">Zariel</option>
+                </select>
+        </div>
+
+        <h1>Custo</h1>
+        <div class="centralizar">
+                <select id="custoSelecionado">
+                    <option value=""> - </option>
+                    <option value="imagens/custo/00.png">00</option>
+                    <option value="imagens/custo/10.png">10</option>
+                    <option value="imagens/custo/20.png">20</option>
+                    <option value="imagens/custo/30.png">30</option>
+                    <option value="imagens/custo/40.png">40</option>
+                    <option value="imagens/custo/50.png">50</option>
+                    <option value="imagens/custo/60.png">60</option>
+                    <option value="imagens/custo/70.png">70</option>
+                    <option value="imagens/custo/80.png">80</option>
+                    <option value="imagens/custo/90.png">90</option>
+                    <option value="imagens/custo/100.png">100</option>
+                    <option value="imagens/custo/110.png">110</option>
+                    <option value="imagens/custo/120.png">120</option>
+                    <option value="imagens/custo/999.png">999</option>
+                </select>
+                <script src="interfaceSelect.js"></script>
+        </div>
+    </div>
+</body>
+</html>
