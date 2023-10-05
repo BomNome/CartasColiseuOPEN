@@ -12,40 +12,38 @@
     <title>Fazer Cartinha</title>
 </head>
 <body>
-    <div class="container-geral">
 
+    <!--CARTA-->
+    <div id="carta">
         <div class="caixa-nomes">
             <div class="caixa-do-nome">
                 <div class="nome-jogador">
                     <p id="nomeJOGADOR"></p>
                 </div>
             </div>
-            
             <div class="caixa-do-nome">
                 <div class="nome-clã">
                     <p class="" id="nomeCLÃ"></p>
                 </div>
             </div>
         </div>
-        
         <div class="nome-lenda">
             <p id="nomeLENDA"></p>
         </div>
-
+        <!--ANTIGO-->
         <!--<div class="borda"></div>
         <div class="borda-fundo"></div>
         <div class="lenda"></div>
         <div class="custo"></div>-->
-
-        <!--ANTIGO-->
-        <img class="imagensCarta" id="borda" src="imagens/borda/borda.png" alt="borda">
+        <img class="imagensCarta" id="borda" src="imagens/borda/borda-marca.png" alt="borda">
         <img class="imagensCarta" id="borda-fundo" src="imagens/borda/borda-fundo.png" alt="borda-fundo">
-
         <img class="imagensCarta" id="lenda" src="" alt="lenda">
         <img class="imagensCarta" id="custo" src="" alt="custo">
-        
     </div>
 
+
+
+    <!--INTERFACE PRA COSTUMIZAR A CARTA-->
     <div class="interface">
 
         <h1>Nome do Jogador</h1>
@@ -155,8 +153,18 @@
                     <option value="imagens/custo/120.png">120</option>
                     <option value="imagens/custo/999.png">999</option>
                 </select>
-                <script src="interfaceSelect.js"></script>
+                
+                
+         </div>
+
+         <h1>Baixe a carta</h1>
+         <div class="centralizar">
+            <button type="button" name="button">
+                <a href="#" id="download">Baixar</a>
+            </button>
         </div>
+
+         <script src="interfaceSelect.js"></script>
     </div>
 </body>
 </html>
