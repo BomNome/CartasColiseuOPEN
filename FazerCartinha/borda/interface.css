@@ -1,0 +1,23 @@
+.interface{
+    width: 200px;
+    height: 375px;
+    position: fixed;
+    float: left;
+    background: rgb(49, 48, 48);
+    margin-left: 10px;
+    margin-top: 130px;
+    font-family: Teko;
+}
+.centralizar{
+    display: flex;
+    justify-content: center;
+    
+}
+.interface h1{
+    text-align: center;
+    color: white;
+}
+.confirmarJogador{
+    width: 20px;
+    margin-left: 2px;
+}

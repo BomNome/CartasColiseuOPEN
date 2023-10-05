@@ -1,0 +1,135 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#carta{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+}
+html{
+    background: rgb(29, 29, 29);
+}
+@font-face {
+    font-family: Oswald;
+    src: url('fontes/Oswald-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: Teko;
+    src: url('fontes/Teko-VariableFont_wght.ttf');
+}
+/*ORGANIZADO POR CAMADA*/
+.caixa-do-nome{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+.nome-jogador{
+    position: absolute;
+    text-align: center;
+    font-size: 90px;
+    width: 500px;
+    background: rgba(0, 0, 0, 0.438);
+    height: 120px;
+    border-top-right-radius: 20%;
+    border-top-left-radius: 20%;
+    color: white;
+    font-family: Oswald;
+    z-index: 6;
+}
+.nome-clã{
+    text-align: center;
+    font-size: 50px;
+    font-family: Oswald;
+    margin-top: 120px;
+    width: 500px;
+    background: linear-gradient(rgba(0, 0, 0, 0.438),rgba(0, 0, 0, 0.034));
+    border-bottom-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+    z-index: 6;
+}
+.caixa-nomes{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(black,rgba(255, 255, 255, 0));
+    z-index: 5;
+    width: 800px;
+    height: 200px;
+    border-top-right-radius: 20%;
+    border-top-left-radius: 20%;
+    margin-top: 30px;
+}
+
+.nome-lenda{
+    position: absolute;
+    margin-top: 1050px;
+    background: linear-gradient(rgba(255, 255, 255, 0),black);
+    width: 500px;
+    height: 150px;
+    border-bottom-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+    z-index: 5;
+}
+.nome-lenda p{
+    font-family: Oswald;
+    text-align: center;
+    font-size: 100px;
+    color: white;
+}
+#custo{
+    position: absolute;
+    /*background: url(imagens/custo/00.png);*/
+    background: cover;
+    width: 900px;
+    height: 1300px;
+    z-index: 4;
+}
+#borda{
+    position: absolute;
+    /*background-image: url(imagens/borda/borda.png);*/
+    background-size: cover;
+    width: 900px;
+    height: 1300px;
+    z-index: 3;
+ 
+}
+#lenda{
+    position: absolute;
+    /*background-image: url(imagens/lenda/1default.png);*/
+    width: 900px;
+    height: 1300px;
+    z-index: 2;
+}
+#borda-fundo{
+    position: absolute;
+    /*background-image: url(imagens/borda/borda-fundo.png);*/
+    background-size: cover;
+    width: 900px;
+    height: 1300px;
+    z-index: 1;
+}
+
+/*CORES DOS CLÃS*/
+.sem-clã{
+    color: grey;
+}
+.berllot{
+    color: rgb(214, 30, 214);
+}
+.bichos-do-mato{
+    color: rgb(56, 187, 56);
+}
+.firebirds{
+    color: yellow;
+}
+.inimigos-da-moda{
+    color: rgb(219, 52, 52);
+}
+.ulgrimnism{
+    color: rgb(250, 178, 43);
+}
+.vasco{
+    color: black;
+}
