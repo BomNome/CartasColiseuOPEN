@@ -1,13 +1,12 @@
 //Para o nome do jogador
+nomeJogador = document.getElementById("nomeJOGADOR")
 function confirmarJogador(){
     let inputJogador = document.getElementById('inputJogador').value
-
     document.getElementById("nomeJOGADOR").innerText = inputJogador
 }
 
 //Para o clã
 const clãSelecionado = document.getElementById('clãSelecionado')
-
 clãSelecionado.addEventListener('change', function(){
     // Nome do clã
     valor = clãSelecionado.value
@@ -44,7 +43,6 @@ clãSelecionado.addEventListener('change', function(){
 //Para o personagem
 const personagemSelecionado = document.getElementById('personagemSelecionado')
 const nomeLENDA = document.getElementById('nomeLENDA')
-
 personagemSelecionado.addEventListener('change', function(){
     // Imagem do personagem
     valor = personagemSelecionado.value

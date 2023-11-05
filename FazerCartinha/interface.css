@@ -1,6 +1,6 @@
 .interface{
     width: 200px;
-    height: 375px;
+    height: 450px;
     position: fixed;
     float: left;
     background: rgb(49, 48, 48);
@@ -20,4 +20,31 @@
 .confirmarJogador{
     width: 20px;
     margin-left: 2px;
+}
+
+/*Telefone*/
+@media (max-width: 912px){
+    .interface{
+        width: 200px;
+        height: 450px;
+        position: fixed;
+        right: 350px;
+        bottom: 330px;
+        background: rgb(49, 48, 48);
+        margin-top: 0px;
+        font-family: Teko;
+    }
+    .centralizar{
+        display: flex;
+        justify-content: center;
+        
+    }
+    .interface h1{
+        text-align: center;
+        color: white;
+    }
+    .confirmarJogador{
+        width: 20px;
+        margin-left: 2px;
+    }
 }
