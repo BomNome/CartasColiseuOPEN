@@ -1,0 +1,303 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#carta{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+html{
+    background: rgb(29, 29, 29);
+}
+@font-face {
+    font-family: Oswald;
+    src: url('fontes/Oswald-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: Teko;
+    src: url('fontes/Teko-VariableFont_wght.ttf');
+}
+/*ORGANIZADO POR CAMADA*/
+.caixa-do-nome{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+.nome-jogador{
+    position: absolute;
+    text-align: center;
+    font-size: 40px;
+    width: 280px;
+    height: 220px;
+    color: white;
+    font-family: Oswald;
+    z-index: 6;
+}
+.nome-clã{
+    text-align: center;
+    font-size: 30px;
+    font-family: Oswald;
+    margin-top: 50px;
+    width: 500px;
+    z-index: 7;
+}
+.caixa-nomes{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(black,rgba(255, 255, 255, 0));
+    z-index: 5;
+    width: 380px;
+    height: 100px;
+    border-top-right-radius: 20%;
+    border-top-left-radius: 20%;
+    margin-top: 15px;
+}
+
+.nome-lenda{
+    position: absolute;
+    margin-top: 475px;
+    background: linear-gradient(rgba(255, 255, 255, 0),black);
+    width: 290px;
+    height: 100px;
+    border-bottom-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+    z-index: 5;
+}
+.nome-lenda p{
+    font-family: Oswald;
+    margin-top: 0px;
+    text-align: center;
+    font-size: 70px;
+    color: white;
+}
+#custo{
+    position: absolute;
+    /*background: url(imagens/custo/00.png);*/
+    background: cover;
+    width: 420px;
+    height: 630px;
+    z-index: 4;
+}
+#borda{
+    position: absolute;
+    /*background-image: url(imagens/borda/borda.png);*/
+    background-size: cover;
+    width: 420px;
+    height: 630px;
+    z-index: 3;
+ 
+}
+#lenda{
+    position: absolute;
+    /*background-image: url(imagens/lenda/1default.png);*/
+    width: 420px;
+    height: 630px;
+    z-index: 2;
+}
+#borda-fundo{
+    position: absolute;
+    /*background-image: url(imagens/borda/borda-fundo.png);*/
+    background-size: cover;
+    width: 420px;
+    height: 630px;
+    z-index: 1;
+}
+
+/*CORES DOS CLÃS*/
+.sem-clã{
+    color: grey;
+}
+.berllot{
+    color: rgb(214, 30, 214);
+}
+.bichos-do-mato{
+    color: rgb(56, 187, 56);
+}
+.firebirds{
+    color: yellow;
+}
+.inimigos-da-moda{
+    color: rgb(219, 52, 52);
+}
+.ulgrimnism{
+    color: rgb(250, 178, 43);
+}
+.vasco{
+    color: black;
+}
+
+/*Telefone*/
+@media (max-width: 400px){
+    .caixa-do-nome{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+    }
+    .nome-jogador{
+        position: absolute;
+        text-align: center;
+        font-size: 40px;
+        height: 220px;
+        color: white;
+        font-family: Oswald;
+        z-index: 6;
+    }
+    .nome-clã{
+        text-align: center;
+        font-size: 30px;
+        font-family: Oswald;
+        margin-top: 42px;
+        width: 300px;
+        z-index: 7;
+    }
+    .caixa-nomes{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        background: linear-gradient(black,rgba(255, 255, 255, 0));
+        z-index: 5;
+        width: 320px;
+        height: 80px;
+        border-top-right-radius: 20%;
+        border-top-left-radius: 20%;
+        margin-top: 13px;
+    }
+    
+    .nome-lenda{
+        position: absolute;
+        margin-top: 400px;
+        background: linear-gradient(rgba(255, 255, 255, 0),black);
+        width: 235px;
+        height: 90px;
+        border-bottom-right-radius: 20%;
+        border-bottom-left-radius: 20%;
+        z-index: 5;
+    }
+    .nome-lenda p{
+        font-family: Oswald;
+        margin-top: 0px;
+        text-align: center;
+        font-size: 60px;
+        color: white;
+    }
+    #custo{
+        position: absolute;
+        /*background: url(imagens/custo/00.png);*/
+        background: cover;
+        width: 350px;
+        height: 530px;
+        z-index: 4;
+    }
+    #borda{
+        position: absolute;
+        /*background-image: url(imagens/borda/borda.png);*/
+        background-size: cover;
+        width: 350px;
+        height: 530px;
+        z-index: 3;
+     
+    }
+    #lenda{
+        position: absolute;
+        /*background-image: url(imagens/lenda/1default.png);*/
+        width: 350px;
+        height: 530px;
+        z-index: 2;
+    }
+    #borda-fundo{
+        position: absolute;
+        /*background-image: url(imagens/borda/borda-fundo.png);*/
+        background-size: cover;
+        width: 350px;
+        height: 530px;
+        z-index: 1;
+    }
+}
+@media (max-width: 280px){
+    .caixa-do-nome{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+    }
+    .nome-jogador{
+        position: absolute;
+        text-align: center;
+        font-size: 30px;
+        height: 220px;
+        color: white;
+        font-family: Oswald;
+        z-index: 6;
+    }
+    .nome-clã{
+        text-align: center;
+        font-size: 20px;
+        font-family: Oswald;
+        margin-top: 35px;
+        width: 300px;
+        z-index: 7;
+    }
+    .caixa-nomes{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        background: linear-gradient(black,rgba(255, 255, 255, 0));
+        z-index: 5;
+        width: 240px;
+        height: 80px;
+        border-top-right-radius: 20%;
+        border-top-left-radius: 20%;
+        margin-top: 13px;
+    }
+    
+    .nome-lenda{
+        position: absolute;
+        margin-top: 325px;
+        background: linear-gradient(rgba(255, 255, 255, 0),black);
+        width: 187px;
+        height: 70px;
+        border-bottom-right-radius: 20%;
+        border-bottom-left-radius: 20%;
+        z-index: 5;
+    }
+    .nome-lenda p{
+        font-family: Oswald;
+        margin-top: 0px;
+        text-align: center;
+        font-size: 40px;
+        color: white;
+    }
+    #custo{
+        position: absolute;
+        /*background: url(imagens/custo/00.png);*/
+        background: cover;
+        width: 270px;
+        height: 430px;
+        z-index: 4;
+    }
+    #borda{
+        position: absolute;
+        /*background-image: url(imagens/borda/borda.png);*/
+        background-size: cover;
+        width: 270px;
+        height: 430px;
+        z-index: 3;
+     
+    }
+    #lenda{
+        position: absolute;
+        /*background-image: url(imagens/lenda/1default.png);*/
+        width: 270px;
+        height: 430px;
+        z-index: 2;
+    }
+    #borda-fundo{
+        position: absolute;
+        /*background-image: url(imagens/borda/borda-fundo.png);*/
+        background-size: cover;
+        width: 270px;
+        height: 430px;
+        z-index: 1;
+    }
+}
