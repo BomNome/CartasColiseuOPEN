@@ -9,26 +9,28 @@
 </head>
 <body>
     <!--CARTA-->
-    <div id="carta">
-        <div class="caixa-nomes">
-            <div class="caixa-do-nome">
-                <div class="nome-jogador">
-                    <p id="nomeJOGADOR">Jogador</p>
+    <div id="cartaCONTAINER">
+        <div id="carta">
+            <div class="caixa-nomes">
+                <div class="caixa-do-nome">
+                    <div class="nome-jogador">
+                        <p id="nomeJOGADOR">Jogador</p>
+                    </div>
+                </div>
+                <div class="caixa-do-nome">
+                    <div class="nome-clã">
+                        <p class="" id="nomeCLÃ">Clã</p>
+                    </div>
                 </div>
             </div>
-            <div class="caixa-do-nome">
-                <div class="nome-clã">
-                    <p class="" id="nomeCLÃ">Clã</p>
-                </div>
+            <div class="nome-lenda">
+                <p id="nomeLENDA">Lenda</p>
             </div>
+            <img class="imagensCarta" id="borda" src="imagens/borda/borda-marca.png" alt="borda">
+            <img class="imagensCarta" id="borda-fundo" src="imagens/borda/borda-fundo.png" alt="borda-fundo">
+            <img class="imagensCarta" id="lenda" src="imagens/lenda/placeholder.png" alt="lenda">
+            <img class="imagensCarta" id="custo" src="imagens/custo/placeholder.png" alt="custo">
         </div>
-        <div class="nome-lenda">
-            <p id="nomeLENDA">Lenda</p>
-        </div>
-        <img class="imagensCarta" id="borda" src="imagens/borda/borda-marca.png" alt="borda">
-        <img class="imagensCarta" id="borda-fundo" src="imagens/borda/borda-fundo.png" alt="borda-fundo">
-        <img class="imagensCarta" id="lenda" src="imagens/lenda/placeholder.png" alt="lenda">
-        <img class="imagensCarta" id="custo" src="imagens/custo/placeholder.png" alt="custo">
     </div>
 
 
@@ -38,7 +40,7 @@
 
         <h1>Nome do Jogador</h1>
         <div class="centralizar">
-            <input type="text" id="inputJogador" value="jogador">
+            <input type="text" id="inputJogador" value="Jogador">
             <button class="confirmarJogador" onclick="confirmarJogador()">Ok</button>
         </div>
 
@@ -149,47 +151,31 @@
 
          <h1>Baixar a carta</h1>
          <div class="centralizar">
-            <p style="color: rgb(255, 0, 0); font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">NO MOMENTO INDISPONIVEL</p>
-            <!--<button type="button" name="button" onclick="show()">Baixar
-                <a href="#" id="download">Baixar</a>
-            </button>-->
+            <button type="button" name="button" onclick="downloadCard()"> 
+                Download
+            </button>
         </div>
-        <p style="color: yellow; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; text-align: center;">É muito provavel que o site apresente muitos erros caso seja usado em um tablet ou celular.</p>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="interfaceSelect.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+    <script type="text/javascript">
+function downloadCard() {
+    var node = document.getElementById('carta');
 
+    // Set the width and height of the canvas to match the content
+    var width = node.offsetWidth;
+    var height = node.offsetHeight;
 
-     <script type="text/javascript">
-        // - UPLOAD - //
-        const borda = 'imagens/borda-marca.png'
-        const bordaFundo = 'imagens/borda-fundo.png'
-        const custoUp = 'imagens/'+custo.src 
-        const lendaUp = 'imagens/'+lenda.src
-        const clãUp = nomeCLÃ.innerText
-        const jogadorUp = nomeJOGADOR.innerText
-        const lendaNomeUp = nomeLENDA.innerText
-
-        function show(){
-            console.log(borda)
-            console.log(bordaFundo)
-            console.log(custoUp)
-            console.log(lendaUp)
-            console.log(clãUp)
-            console.log(jogadorUp)
-            console.log(lendaNomeUp)
-        }
-
-
-
-        setInterval(function(){
-            preview()
-        }, 0)
-        function preview(){
-            $('#inputJogador').text(nomeJOGADOR)
-        }
+    domtoimage.toBlob(node, { width: width, height: height })
+        .then(function (blob) {
+            var link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'carta.png';
+            link.click();
+        });
+}
     </script>
 </body>
 </html>
