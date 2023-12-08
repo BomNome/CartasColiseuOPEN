@@ -33,6 +33,7 @@ html{
     color: white;
     font-family: Oswald;
     z-index: 6;
+    text-shadow: 2px 2px 4px black;
 }
 .nome-clã{
     text-align: center;
@@ -41,6 +42,7 @@ html{
     margin-top: 50px;
     width: 500px;
     z-index: 7;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
 .caixa-nomes{
     position: absolute;
@@ -57,20 +59,21 @@ html{
 
 .nome-lenda{
     position: absolute;
-    margin-top: 475px;
+    margin-top: 495px;
     background: linear-gradient(rgba(255, 255, 255, 0),black);
-    width: 290px;
-    height: 100px;
+    width: 285px;
+    height: 80px;
     border-bottom-right-radius: 20%;
     border-bottom-left-radius: 20%;
     z-index: 5;
 }
 .nome-lenda p{
     font-family: Oswald;
-    margin-top: 0px;
+    margin-top: -26px;
     text-align: center;
     font-size: 70px;
     color: white;
+    text-shadow: 2px 2px 4px black;
 }
 #custo{
     position: absolute;
@@ -87,7 +90,6 @@ html{
     width: 420px;
     height: 630px;
     z-index: 3;
- 
 }
 #lenda{
     position: absolute;
@@ -125,7 +127,7 @@ html{
     color: rgb(250, 178, 43);
 }
 .vasco{
-    color: black;
+    color: rgb(0, 0, 0);
 }
 
 /*Telefone*/
@@ -138,7 +140,7 @@ html{
     .nome-jogador{
         position: absolute;
         text-align: center;
-        font-size: 40px;
+        font-size: 35px;
         height: 220px;
         color: white;
         font-family: Oswald;
@@ -146,7 +148,7 @@ html{
     }
     .nome-clã{
         text-align: center;
-        font-size: 30px;
+        font-size: 28px;
         font-family: Oswald;
         margin-top: 42px;
         width: 300px;
@@ -167,7 +169,7 @@ html{
     
     .nome-lenda{
         position: absolute;
-        margin-top: 400px;
+        margin-top: 395px;
         background: linear-gradient(rgba(255, 255, 255, 0),black);
         width: 235px;
         height: 90px;
