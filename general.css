@@ -28,7 +28,7 @@ html{
     position: absolute;
     text-align: center;
     font-size: 40px;
-    width: 280px;
+    width: 380px;
     height: 220px;
     color: white;
     font-family: Oswald;
@@ -140,7 +140,7 @@ html{
     .nome-jogador{
         position: absolute;
         text-align: center;
-        font-size: 35px;
+        font-size: 33px;
         height: 220px;
         color: white;
         font-family: Oswald;
